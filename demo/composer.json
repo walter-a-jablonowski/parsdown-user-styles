@@ -19,7 +19,7 @@
 
   "require": {
     "symfony/yaml": "4.3.3",
-    "ParsedownUserStyles": "master"
+    "walter-a-jablonowski/parsedown-user-styles": "dev-master"
   },
 
   "autoload": {
