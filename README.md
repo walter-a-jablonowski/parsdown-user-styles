@@ -6,6 +6,8 @@ Define whatever syntax you want...
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> If you like visit my personal homepage: [walter-a-jablonowski.github.io](https://walter-a-jablonowski.github.io)
+
 
 ### Usage
 
@@ -18,7 +20,9 @@ Include your stylesheets if you have class names in replace html.
 
 #### YAML version
 
-You may use [Symfony yaml](https://symfony.com/doc/current/components/yaml) as well
+You may use [Symfony yaml](https://symfony.com/doc/current/components/yaml) as well.
+
+See `demo/demo.php` for a full sample.
 
 ```php
 $md->setStyles( Yaml::parse( file_get_contents( ... )) );
@@ -91,19 +95,15 @@ $md->addStyle( 'Unique - name 5', [             // Uses function, $found is resu
   ]
 ]);
 
-$mdString = $md->text( '[[ My headline ]]' );  // => <span class="header"> My headline </span>
+$mdString = $md->text( ... );
 ```
-
-
-> If you like visit my personal homepage: [walter-a-jablonowski.github.io](https://walter-a-jablonowski.github.io)
 
 
 ### LICENSE
 
 Copyright (C) Walter A. Jablonowski 2020, MIT [License](LICENSE)
 
-This library is build upon PHP (license see [credits](credits.md)) and has no further dependencies.\
-Licenses of third party software used in samples see [credits](credits.md).
+Licenses of third party software and stuff see [credits](credits.md).
 
 
 [Privacy](https://walter-a-jablonowski.github.io/privacy.html) | [Legal](https://walter-a-jablonowski.github.io/imprint.html)
