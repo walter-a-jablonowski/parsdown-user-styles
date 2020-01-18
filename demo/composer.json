@@ -20,10 +20,5 @@
   "require": {
     "symfony/yaml": "4.3.3",
     "walter-a-jablonowski/parsedown-user-styles": "dev-master"
-  },
-
-  "autoload": {
-    "psr-4": {
-    }
   }
 }

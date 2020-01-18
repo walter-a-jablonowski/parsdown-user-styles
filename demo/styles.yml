@@ -1,0 +1,42 @@
+Unique - name:
+
+  -
+    find:    "[["
+    replace: "<span class=\"header\">"
+  -
+    find:    "]]"
+    replace: "</span>"
+
+
+Unique - name 2:
+
+  -
+    regFind: "\\{Img:\\s*(.*)\\}"
+    replace: "<img src=\"$1\" style=\"max-width: 100%;\" />"
+
+
+Unique - name 5:
+
+  -
+    regFind: "\\{Url:\\s*([^\\s]*)\\s*(.*)\\}"
+    do: |
+    
+      function( $text, $found ) {
+
+        // do something with $found
+        // replace in $text
+
+        foreach( $found as $f )
+        {
+          $fullStr = $f[0];
+          $label   = $f[1];
+          $url     = $f[2];
+
+          $s = str_replace( "[URL]",   "http://" . $url, "<a href=\"[URL]\">[LABEL]</a>" );
+          $s = str_replace( "[LABEL]", $label, $s );
+
+          $text = str_replace( $fullStr, $s, $text );
+        }
+        
+        return $text;
+      }
