@@ -2,7 +2,7 @@
 
 **User defined syntax for ParsedownExtra**
 
-Define whatever syntax you want...
+Define whatever syntax you want... using a minimalistic PHP class.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -20,9 +20,7 @@ Include your stylesheets if you have class names in replace html.
 
 #### YAML version
 
-You may use [Symfony yaml](https://symfony.com/doc/current/components/yaml) as well.
-
-See `demo/demo.php` for a full sample.
+You may use [Symfony yaml](https://symfony.com/doc/current/components/yaml) as well. See `demo/demo.php` for a full sample.
 
 ```php
 $md->setStyles( Yaml::parse( file_get_contents( ... )) );
