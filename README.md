@@ -9,7 +9,7 @@ Define whatever syntax you want... using a minimalistic PHP class.
 > If you like visit my personal homepage: [walter-a-jablonowski.github.io](https://walter-a-jablonowski.github.io)
 
 
-### Usage
+## Usage
 
 ```
 composer require walter-a-jablonowski/parsedown-user-styles
@@ -18,7 +18,7 @@ composer require walter-a-jablonowski/parsedown-user-styles
 Include your stylesheets if you have class names in replace html.
 
 
-#### YAML version
+### YAML version
 
 You may use [Symfony yaml](https://symfony.com/doc/current/components/yaml) as well. See `demo/demo.php` for a full sample.
 
@@ -40,7 +40,7 @@ Unique - name:
 ```
 
 
-#### Pure code style (full sample)
+### Pure code style (full sample)
 
 Define whatever syntax you want, these are just for demo
 
@@ -97,7 +97,7 @@ $mdString = $md->text( ... );
 ```
 
 
-### LICENSE
+## LICENSE
 
 Copyright (C) Walter A. Jablonowski 2020, MIT [License](LICENSE)
 
