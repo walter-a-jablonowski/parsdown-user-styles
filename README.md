@@ -22,7 +22,7 @@ Include your stylesheets if you have class names in replace html.
 Define whatever syntax you want, these are just for demo. Using [Symfony yaml](https://symfony.com/doc/current/components/yaml) here.
 
 ```php
-$md = new ParsedownUserStyles();  // pass $userdata id needed, default is []
+$md = new ParsedownUserStyles();  // pass $userdata if needed (see third style below)
 
 // use parsedown's methods as needed
 
@@ -50,7 +50,7 @@ Unique - name 2:     # regex version
     regFind: "\\{Img:\\s*(.*)\\}"
     replace: "<img src=\"$1\" style=\"max-width: 100%;\" />"
 
-Unique - name 5:     # use of anonymous function
+Unique - name 5:     # Use of anonymous function
                      # $found is result of preg_match_all() with SET ORDER (no OFFSET CAPTURE)
   -
     regFind: "\\{Url:\\s*([^\\s]*)\\s*(.*)\\}"
