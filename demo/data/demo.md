@@ -8,8 +8,11 @@ define whatever syntax you want, these are just for demo:
 
 just use `[ [` Header `] ]` (without additional blanks).
 
-`{ Url: Google google.de }` will be {Url: Google google.de},
+`{ Url: Google google.de }` will be {Url: Google google.de}
+using anonymous function.
 
-and `{ Img: alvan-nee-T-0EW-SEbsE-unsplash.jpg }` turns in
+You can use PHP: **<?php echo('I was printed by PHP'); ?>**
+
+And using regex replace `{ Img: alvan-nee-T-0EW-SEbsE-unsplash.jpg }` turns in
 
 {Img: data/alvan-nee-T-0EW-SEbsE-unsplash.jpg}

@@ -13,7 +13,7 @@ $md = new ParsedownUserStyles();
 
 $md->setStyles( Yaml::parse( file_get_contents( 'styles.yml' )) );
 
-$mdString = $md->text( file_get_contents('data/demo.md') );
+$mdString = $md->textPHP( file_get_contents('data/demo.md') );
 
 
 ?><!DOCTYPE html>

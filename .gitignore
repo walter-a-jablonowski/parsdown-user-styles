@@ -1,5 +1,6 @@
 vendor/
 composer.lock
-01_proj.md
+01_proj/
 desktop.ini
 igel.gif
+default_styles.yml

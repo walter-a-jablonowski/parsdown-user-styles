@@ -9,12 +9,15 @@ namespace WAJ\Lib\Spec\ParsedownUserStyles;
 class ParsedownUserStyles extends \ParsedownExtra
 {
   
-  protected $styles = [];
+  protected $styles   = [];
+  protected $userdata = [];
 
 
-  public function __construct()
+  public function __construct($userdata = [])
   {
     parent::__construct();
+    
+    $this->userdata = $userdata;
   }
 
 
@@ -53,10 +56,10 @@ class ParsedownUserStyles extends \ParsedownExtra
             preg_match_all( "/$replacement[regFind]/", $text, $found, PREG_SET_ORDER );
 
             eval("\$func = $replacement[do];");
-            $text = $func($text, $found);
+            $text = $func($text, $found, $this->userdata);
 
             // $func = $replacement['do'];
-            // $text = ($func)($text, $found);
+            // $text = ($func)($text, $found, $this->userdata);
           }
           else
           {
@@ -66,6 +69,28 @@ class ParsedownUserStyles extends \ParsedownExtra
  
     return parent::text($text);
   }
+
+
+  public function textPHP( $text, $args )
+  {
+    $text = $this->runPHP( $text, $args);
+    return $this->text( $text );
+  }
+
+
+  // Helper
+
+  protected function runPHP( $view, $args = [])  /*@*/
+  {
+    extract($args);
+
+    ob_start();  // Alternative: $s = require()
+    require($view);
+    $RUN_PHP_STR = ob_get_clean();  // var has unusual name
+
+    return $RUN_PHP_STR;
+  }
+
 }
 
 ?>
