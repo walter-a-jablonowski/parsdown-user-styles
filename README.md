@@ -2,7 +2,7 @@
 
 **User defined syntax for ParsedownExtra**
 
-Define whatever syntax you want... using a minimalistic PHP class. Also capable of running PHP that embedded in md. You can use this for calculations, dynamic content, ...
+Define whatever syntax you want... using a minimalistic PHP class. Also capable of running PHP embedded in md. Use it for calculations, dynamic content, ...
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

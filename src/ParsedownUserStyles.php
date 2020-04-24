@@ -71,24 +71,24 @@ class ParsedownUserStyles extends \ParsedownExtra
   }
 
 
-  public function textPHP( $text, $args = [] )
+  public function textPHP( $file, $args = [] )
   {
-    $text = $this->runPHP( $text, $args);
+    $text = $this->runPHP( $file, $args);
     return $this->text( $text );
   }
 
 
   // Helper
 
-  protected function runPHP( $view, $args = [])  /*@*/
+  protected function runPHP( $runFile, $runArgs = [])  /*@*/
   {
-    extract($args);
+    extract($runArgs);  // vars have unusual names
 
-    ob_start();  // Alternative: $s = require()
-    require($view);
-    $RUN_PHP_STR = ob_get_clean();  // var has unusual name
+    ob_start();
+    require($runFile);
+    $runPHPStr = ob_get_clean();
 
-    return $RUN_PHP_STR;
+    return $runPHPStr;
   }
 
 }
