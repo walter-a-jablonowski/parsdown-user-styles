@@ -71,7 +71,7 @@ class ParsedownUserStyles extends \ParsedownExtra
   }
 
 
-  public function textPHP( $text, $args )
+  public function textPHP( $text, $args = [] )
   {
     $text = $this->runPHP( $text, $args);
     return $this->text( $text );
