@@ -1,4 +1,5 @@
 vendor/
+mngm/
 composer.lock
 01_proj/
 desktop.ini
